@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html><head><link href="css/default.css" rel="stylesheet" type="text/css"><script src="js/jquery.min.js" type="text/javascript"></script><script src="js/page_effects.js" type="text/javascript"></script><title>pallet.crate.squid documentation</title></head><body><div id="header"><h1><a href="index.html">Squid 0.6 API documentation</a></h1></div><div class="sidebar" id="namespaces"><h3>Namespaces</h3><ul><li class="current"><a href="pallet.crate.squid.html">pallet.crate.squid</a></li></ul></div><div class="sidebar" id="vars"><h3>Public Vars</h3><ul><li><a href="pallet.crate.squid.html#var-configure">configure</a></li><li><a href="pallet.crate.squid.html#var-init-service">init-service</a></li><li><a href="pallet.crate.squid.html#var-iptables-accept">iptables-accept</a></li><li><a href="pallet.crate.squid.html#var-ordered-keys">ordered-keys</a></li><li><a href="pallet.crate.squid.html#var-squid">squid</a></li><li><a href="pallet.crate.squid.html#var-squid-conf">squid-conf</a></li><li><a href="pallet.crate.squid.html#var-squid-conf-file">squid-conf-file</a></li><li><a href="pallet.crate.squid.html#var-squid-config-changed-flag">squid-config-changed-flag</a></li></ul></div><div class="namespace-docs" id="content"><h2>pallet.crate.squid documentation</h2><pre class="doc">Crate for Squid.
+
+Installation from package with the `squid` function. Top level configuration
+with `configure`.
+
+Directives are here:
+  http://www1.at.squid-cache.org/Versions/v2/HEAD/cfgman/index.html</pre><div class="public" id="var-configure"><h3>configure</h3><div class="usage"><code>(configure session config &amp; {:keys [literal], :or {literal true}})</code></div><pre class="doc">Configure squid with the specified `config` map. See `default-config` for an
+example of the map entries.</pre></div><div class="public" id="var-init-service"><h3>init-service</h3><div class="usage"><code>(init-service session &amp; {:keys [action if-config-changed if-flag], :as options})</code></div><pre class="doc">Control the squid service.
+
+Specify `:if-config-changed true` to make actions conditional on a change in
+configuration.
+
+Other options are as for `pallet.action.service/service`. The service
+name is looked up in the session parameters.</pre></div><div class="public" id="var-iptables-accept"><h3>iptables-accept</h3><div class="usage"><code>(iptables-accept session)</code><code>(iptables-accept session port)</code></div><pre class="doc">Accept proxy sessions, by default on port 3128.
+</pre></div><div class="public" id="var-ordered-keys"><h3>ordered-keys</h3><div class="usage"></div><pre class="doc">Ordering is significant for some keys
+</pre></div><div class="public" id="var-squid"><h3>squid</h3><div class="usage"><code>(squid session &amp; {:keys [action config-dir package-name service-name], :or {package-name &quot;squid&quot;, config-dir (default-config-home)}, :as options})</code></div><pre class="doc">Install squid from packages.
+options as for pallet.action.package/package.</pre></div><div class="public" id="var-squid-conf"><h3>squid-conf</h3><div class="usage"><code>(squid-conf config)</code><code>(squid-conf config prefix)</code></div><pre class="doc">Create a squid config based on the supplied map.
+
+You can use `default-options` for a sane default, but should probably merge
+in at least a :cache_dir directive in order to set the cache size.</pre></div><div class="public" id="var-squid-conf-file"><h3>squid-conf-file</h3><div class="usage"><code>(squid-conf-file session &amp; {:as options})</code></div><pre class="doc">Write the squid configuration file (squid.conf)
+
+Options are as for remote-file.</pre></div><div class="public" id="var-squid-config-changed-flag"><h3>squid-config-changed-flag</h3><div class="usage"></div><pre class="doc">Flag for recognising changes to configuration
+</pre></div></div></body></html>
