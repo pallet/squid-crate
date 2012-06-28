@@ -4,20 +4,22 @@
   <parent>
     <groupId>org.cloudhoist</groupId>
     <artifactId>pallet-crate-pom</artifactId>
-    <version>0.7.1-SNAPSHOT</version>
+    <version>0.7.1</version>
   </parent>
+  <artifactId>squid</artifactId>
+  <version>0.7.0-SNAPSHOT</version>
+
   <scm>
     <connection>scm:git:git://github.com/pallet/squid-crate.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/pallet/squid-crate.git</developerConnection>
     <url>https://github.com/pallet/squid-crate</url>
   </scm>
-  <artifactId>squid</artifactId>
-  <version>0.7.0-SNAPSHOT</version>
 
   <dependencies>
     <dependency>
       <groupId>org.cloudhoist</groupId>
       <artifactId>iptables</artifactId>
+      <version>0.7.0-beta.1</version>
     </dependency>
   </dependencies>
 </project>
