@@ -1,5 +1,8 @@
 # Release notes
 
+## squid 0.7.0-beta.1
+
+- update to pallet 0.7
 
 ## pallet-crates-0.5.0
 
